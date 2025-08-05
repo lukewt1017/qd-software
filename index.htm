@@ -15,12 +15,6 @@ function FP_swapImg() {//v1.0
  n+=2) { elm=FP_getObjectByID(args[n]); if(elm) { doc.$imgSwaps[doc.$imgSwaps.length]=elm;
  elm.$src=elm.src; elm.src=args[n+1]; } }
 }
-
-function FP_preloadImgs() {//v1.0
- var d=document,a=arguments; if(!d.FP_imgs) d.FP_imgs=new Array();
- for(var i=0; i<a.length; i++) { d.FP_imgs[i]=new Image; d.FP_imgs[i].src=a[i]; }
-}
-
 function FP_getObjectByID(id,o) {//v1.0
  var c,el,els,f,m,n; if(!o)o=document; if(o.getElementById) el=o.getElementById(id);
  else if(o.layers) c=o.layers; else if(o.all) el=o.all[id]; if(el) return el;
@@ -36,7 +30,7 @@ function FP_getObjectByID(id,o) {//v1.0
 <meta name="Microsoft Border" content="tlb, default">
 </head>
 
-<body onload="FP_preloadImgs(/*url*/'images/gif/button7.gif',/*url*/'images/gif/button6.gif',/*url*/'images/gif/buttonA.jpg',/*url*/'images/gif/button9.jpg')"  ><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td>
+<body  ><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td>
 
 
 <p>
@@ -46,7 +40,7 @@ function FP_getObjectByID(id,o) {//v1.0
 <font face="Franklin Gothic Demi" color="#FFFFFF" style="font-size: 48pt; font-style: italic">
 &nbsp;</font><font face="Franklin Gothic Demi" style="font-size: 48pt; font-style: italic" color="#000000">Software</font></p>
 <p><a href="index.htm">
-<img border="0" id="img1" src="images/gif/button5.gif" height="33" width="100" alt="Home" fp-style="fp-btn: Glass Tab 4; fp-transparent: 1" fp-title="Home" onmouseover="FP_swapImg(1,0,/*id*/'img1',/*url*/'images/gif/button6.gif')" onmouseout="FP_swapImg(0,0,/*id*/'img1',/*url*/'images/gif/button5.gif')" onmousedown="FP_swapImg(1,0,/*id*/'img1',/*url*/'images/gif/button7.gif')" onmouseup="FP_swapImg(0,0,/*id*/'img1',/*url*/'images/gif/button6.gif')"></a></p>
+<img border="0" id="img1" src="images/gif/button5.gif" height="33" width="100" alt="Home" fp-style="fp-btn: Glass Tab 4; fp-transparent: 1" fp-title="Home" onmouseover="FP_swapImg(1,0,/*id*/'img1',/*url*/'images/gif/button6.gif')" onmouseout="FP_swapImg(0,0,/*id*/'img1',/*url*/'images/gif/button5.gif')" onmousedown="FP_swapImg(1,0,/*id*/'img1',/*url*/'images/gif/button7.gif')" onmouseup="FP_swapImg(0,0,/*id*/'img1',/*url*/'images/gif/button6.gif')"></a><a href="qdatabase/welcome.htm"><img border="0" id="img3" src="images/gif/button13.jpg" height="33" width="100" alt="QDatabase" onmouseover="FP_swapImg(1,0,/*id*/'img3',/*url*/'images/gif/button14.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img3',/*url*/'images/gif/button13.jpg')" onmousedown="FP_swapImg(1,0,/*id*/'img3',/*url*/'images/gif/button15.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img3',/*url*/'images/gif/button14.jpg')" fp-style="fp-btn: Glass Tab 5" fp-title="QDatabase"></a></p>
 
 </td></tr><!--msnavigation--></table><!--msnavigation--><table dir="ltr" border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td valign="top" width="1%">
 
@@ -64,9 +58,9 @@ function FP_getObjectByID(id,o) {//v1.0
 
 <p> </p>
 
-<h2>Our Mission</h2>
-<p>We try to make computers more fun and easy to use. We provide fun stuff for 
-nerds like us and we make computing easier for the average home user.</p>
+<h2><font face="Arial">Our Mission</font></h2>
+<p><font face="Arial">We try to make computers more fun and easy to use. We provide fun stuff for 
+nerds like us and we make computing easier for the average home user.</font></p>
 
 
 
@@ -77,23 +71,25 @@ nerds like us and we make computing easier for the average home user.</p>
 <hr>
 
 <p> </p>
-<h2>Contact Information</h2>
-<p>Want to contact QD Software? E-mail the e-mail addresses below, or instant 
+<h2><font face="Arial">Contact Information</font></h2>
+<p><font face="Arial">Want to contact QD Software? E-mail the e-mail addresses below, or instant 
 message the CEO with <a href="http://www.escargot.chat/">MSN, AIM, ICQ, or 
-Yahoo!</a></p>
+Yahoo!</a></font></p>
 
 <dl>
     <dt>
-	<img border="0" src="images/qd-shell_icons/emlwiz.png" width="48" height="48" align="left"><strong>Electronic mail</strong> </dt>
-	<dd>Customer Support: <a href="mailto:qd.soft@hotmail.com">qd.soft@hotmail.com</a><br>
+	<font face="Arial">
+	<img border="0" src="images/qd-shell_icons/emlwiz.png" width="48" height="48" align="left"><strong>Electronic mail</strong> 
+	</font> </dt>
+	<dd><font face="Arial">Customer Support: <a href="mailto:qd.soft@hotmail.com">qd.soft@hotmail.com</a><br>
         Webmaster: <a href="mailto:luketraylor@hotmail.com">
 	<!--webbot
-        bot="Substitution" s-variable="CompanyWebmaster" startspan -->luketraylor@hotmail.com<!--webbot bot="Substitution" i-checksum="4351" endspan --></a></dd>
+        bot="Substitution" s-variable="CompanyWebmaster" startspan -->luketraylor@hotmail.com<!--webbot bot="Substitution" i-checksum="4351" endspan --></a></font></dd>
 	<dt>&nbsp;</dt>
-	<dt><b>
+	<dt><font face="Arial"><b>
 	<img border="0" src="images/qd-shell_icons/instmsg.png" width="48" height="48" align="left">Instant 
-	message</b></dt>
-	<dd><a href="mailto:luketraylor@escargot.chat">luketraylor@escargot.chat</a></dd>
+	message</b></font></dt>
+	<dd><font face="Arial"><a href="mailto:luketraylor@escargot.chat">luketraylor@escargot.chat</a></font></dd>
 </dl>
 
 
