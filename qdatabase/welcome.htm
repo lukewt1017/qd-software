@@ -16,6 +16,11 @@ function FP_swapImg() {//v1.0
  elm.$src=elm.src; elm.src=args[n+1]; } }
 }
 
+function FP_preloadImgs() {//v1.0
+ var d=document,a=arguments; if(!d.FP_imgs) d.FP_imgs=new Array();
+ for(var i=0; i<a.length; i++) { d.FP_imgs[i]=new Image; d.FP_imgs[i].src=a[i]; }
+}
+
 function FP_getObjectByID(id,o) {//v1.0
  var c,el,els,f,m,n; if(!o)o=document; if(o.getElementById) el=o.getElementById(id);
  else if(o.layers) c=o.layers; else if(o.all) el=o.all[id]; if(el) return el;
@@ -31,21 +36,21 @@ function FP_getObjectByID(id,o) {//v1.0
 <meta name="Microsoft Border" content="tlb, default">
 </head>
 
-<body  ><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td>
+<body onload="FP_preloadImgs(/*url*/'images/buttons/button6.gif',/*url*/'images/buttons/button5.gif',/*url*/'images/buttons/button14.jpg',/*url*/'images/buttons/button13.jpg',/*url*/'images/buttons/button11.jpg',/*url*/'images/buttons/button10.jpg')"  ><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td>
 
 
 <p>
 <img border="0" src="images/buttons/qdatabase.png" width="210" height="81">&nbsp;&nbsp;
 </p>
-<p><b><i><font face="Arial" size="6"><a href="index.htm">
-<img border="0" id="img1" src="images/buttons/buttonC.gif" height="33" width="100" alt="Home" fp-style="fp-btn: Glass Tab 2; fp-transparent: 1" fp-title="Home" onmouseover="FP_swapImg(1,0,/*id*/'img1',/*url*/'images/buttons/buttonD.gif')" onmouseout="FP_swapImg(0,0,/*id*/'img1',/*url*/'images/buttons/buttonC.gif')" onmousedown="FP_swapImg(1,0,/*id*/'img1',/*url*/'images/buttons/buttonE.gif')" onmouseup="FP_swapImg(0,0,/*id*/'img1',/*url*/'images/buttons/buttonD.gif')"></a></font></i></b></p>
+<p><b><i><font face="Arial" size="6"><a href="welcome.htm">
+<img border="0" id="img1" src="images/buttons/button4.gif" height="33" width="100" alt="Home" fp-style="fp-btn: Glass Tab 2; fp-transparent: 1" fp-title="Home" onmouseover="FP_swapImg(1,0,/*id*/'img1',/*url*/'images/buttons/button5.gif')" onmouseout="FP_swapImg(0,0,/*id*/'img1',/*url*/'images/buttons/button4.gif')" onmousedown="FP_swapImg(1,0,/*id*/'img1',/*url*/'images/buttons/button6.gif')" onmouseup="FP_swapImg(0,0,/*id*/'img1',/*url*/'images/buttons/button5.gif')"></a></font></i></b></p>
 
 </td></tr><!--msnavigation--></table><!--msnavigation--><table dir="ltr" border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td valign="top" width="1%">
 
 
 
-<p><font face="Arial">
-<img border="0" id="img3" src="images/buttons/button12.jpg" height="20" width="100" alt="Software" onmouseover="FP_swapImg(1,0,/*id*/'img3',/*url*/'images/buttons/button13.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img3',/*url*/'images/buttons/button12.jpg')" onmousedown="FP_swapImg(1,0,/*id*/'img3',/*url*/'images/buttons/button14.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img3',/*url*/'images/buttons/button13.jpg')" fp-style="fp-btn: Glass Rectangle 2" fp-title="Software"></font>
+<p><font face="Arial"><a href="software.htm">
+<img border="0" id="img3" src="images/buttons/button12.jpg" height="20" width="100" alt="Software" onmouseover="FP_swapImg(1,0,/*id*/'img3',/*url*/'images/buttons/button13.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img3',/*url*/'images/buttons/button12.jpg')" onmousedown="FP_swapImg(1,0,/*id*/'img3',/*url*/'images/buttons/button14.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img3',/*url*/'images/buttons/button13.jpg')" fp-style="fp-btn: Glass Rectangle 2" fp-title="Software"></a></font>
 <font face="Arial"><a href="information.htm">
 <img border="0" id="img2" src="images/buttons/buttonF.jpg" height="20" width="100" alt="Information" fp-style="fp-btn: Glass Rectangle 2" fp-title="Information" onmouseover="FP_swapImg(1,0,/*id*/'img2',/*url*/'images/buttons/button10.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img2',/*url*/'images/buttons/buttonF.jpg')" onmousedown="FP_swapImg(1,0,/*id*/'img2',/*url*/'images/buttons/button11.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img2',/*url*/'images/buttons/button10.jpg')"></a></font></p>
 
