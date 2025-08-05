@@ -6,15 +6,15 @@
 <title>DOS Software Reviews</title>
 <script language="JavaScript">
 <!--
+function FP_preloadImgs() {//v1.0
+ var d=document,a=arguments; if(!d.FP_imgs) d.FP_imgs=new Array();
+ for(var i=0; i<a.length; i++) { d.FP_imgs[i]=new Image; d.FP_imgs[i].src=a[i]; }
+}
+
 function FP_swapImg() {//v1.0
  var doc=document,args=arguments,elm,n; doc.$imgSwaps=new Array(); for(n=2; n<args.length;
  n+=2) { elm=FP_getObjectByID(args[n]); if(elm) { doc.$imgSwaps[doc.$imgSwaps.length]=elm;
  elm.$src=elm.src; elm.src=args[n+1]; } }
-}
-
-function FP_preloadImgs() {//v1.0
- var d=document,a=arguments; if(!d.FP_imgs) d.FP_imgs=new Array();
- for(var i=0; i<a.length; i++) { d.FP_imgs[i]=new Image; d.FP_imgs[i].src=a[i]; }
 }
 
 function FP_getObjectByID(id,o) {//v1.0
@@ -32,7 +32,7 @@ function FP_getObjectByID(id,o) {//v1.0
 <meta name="Microsoft Border" content="tlb, default">
 </head>
 
-<body onload="FP_preloadImgs(/*url*/'../images/buttons/buttonE.gif',/*url*/'../images/buttons/buttonD.gif',/*url*/'../images/buttons/button14.jpg',/*url*/'../images/buttons/button13.jpg',/*url*/'../images/buttons/button11.jpg',/*url*/'../images/buttons/button10.jpg')"><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td>
+<body onload="FP_preloadImgs(/*url*/'../images/buttons/buttonE.gif', /*url*/'../images/buttons/buttonD.gif')"><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td>
 
 
 <p>
@@ -56,10 +56,7 @@ function FP_getObjectByID(id,o) {//v1.0
 <p><font face="Arial">Here is some useful software for DOS, all in the form of 
 reviews. </font></p>
 <p><font face="Arial">
-<a href="CTMouse%20(Mouse%20driver)%20Review%20(2025-08-04)">CTMouse (Mouse 
-driver) Review (2025-08-04)</a></font></p>
-
-<!--msnavigation--></td></tr><!--msnavigation--></table><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td>
+<a href="dos/ctmouse.htm">CTMouse - Outstanding DOS mouse driver</a></font></p><!--msnavigation--></td></tr><!--msnavigation--></table><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td>
 
 <p>QDatabase is a product of
 <a href="https://lukewt1017.github.io/qd-software/index.htm">QD Software</a>.</p>
