@@ -1,2 +1,2 @@
-# qd-software
-QD Software Web-site and software
+# QD Software
+This is the web-site of QD Software.
