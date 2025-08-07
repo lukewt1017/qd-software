@@ -11,6 +11,12 @@ function FP_swapImg() {//v1.0
  n+=2) { elm=FP_getObjectByID(args[n]); if(elm) { doc.$imgSwaps[doc.$imgSwaps.length]=elm;
  elm.$src=elm.src; elm.src=args[n+1]; } }
 }
+
+function FP_preloadImgs() {//v1.0
+ var d=document,a=arguments; if(!d.FP_imgs) d.FP_imgs=new Array();
+ for(var i=0; i<a.length; i++) { d.FP_imgs[i]=new Image; d.FP_imgs[i].src=a[i]; }
+}
+
 function FP_getObjectByID(id,o) {//v1.0
  var c,el,els,f,m,n; if(!o)o=document; if(o.getElementById) el=o.getElementById(id);
  else if(o.layers) c=o.layers; else if(o.all) el=o.all[id]; if(el) return el;
@@ -26,7 +32,7 @@ function FP_getObjectByID(id,o) {//v1.0
 <meta name="Microsoft Border" content="tlb, default">
 </head>
 
-<body><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td>
+<body onload="FP_preloadImgs(/*url*/'images/buttons/button6.gif',/*url*/'images/buttons/button5.gif',/*url*/'images/buttons/button14.jpg',/*url*/'images/buttons/button13.jpg',/*url*/'images/buttons/button11.jpg',/*url*/'images/buttons/button10.jpg')"><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td>
 
 
 <p>
@@ -48,12 +54,15 @@ function FP_getObjectByID(id,o) {//v1.0
 
 <p><b><i><font face="Arial" size="6">Information and Tutorials</font></i></b></p>
 <p><font face="Arial">This page contains lots of useful information and 
-tutorials.<br>
+tutorials.</font></p>
+<p><font face="Arial">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="tutorials/install_win_98_after_2000.htm">How To Replace Windows 2000 
+With Windows 98</a><br>
 &nbsp;</font></p>
 <p><img border="0" src="images/ntdos.bmp" width="64" height="63" align="left"><font face="Arial"><a href="tutorials/run_dos_on_a_win_nt_pc.htm">Run DOS On 
 Your Windows NT/2000/XP Computer While Keeping NT Intact</a></font></p>
 <p><font face="Arial">&nbsp;NT's DOS sub-system not running your DOS programs 
-right? Look no further! <font size="1">(2025-08-05)</font></font></p><!--msnavigation--></td></tr><!--msnavigation--></table><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td>
+right? Look no further! </font></p><!--msnavigation--></td></tr><!--msnavigation--></table><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td>
 
 <p>QDatabase is a product of
 <a href="https://lukewt1017.github.io/qd-software/index.htm">QD Software</a>.</p>
